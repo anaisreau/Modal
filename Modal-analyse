@@ -1,0 +1,35 @@
+Modal
+
+1 – Que fait le code : 
+
+le code se sert d’un clic sur une boite pour faire apparaître le contenu d’un resumé ou d’une légende 
+
+2- Quel est le but : 
+
+le but est de ne pas surcharger la page avec des éléments superflus et de permettre d’accéder a des informations plus détaillées grâce au clic sur la boite 
+
+3- Comment ça marche : 
+
+dans le document HTML la balise détail englobe une balise summary 
+dans la balise summary on met le texte qui permettra le clic 
+dans la balise détails qui on mettra le texte qui apparaîtra seulement au clic 
+
+<details class="modal">
+<summary class="modal-trigger">Click me, and I'll show you something</summary>
+<p class="modal-content">Something</p>
+</details>
+
+
+Dans le css on appelle la class modal-trigger qui concerne le texte cliquable 
+on change le curseur et on le transforme en main grâce a cursor pointer on lui attribue un inline block afin que la boite se limite a la taille de la phrase 
+
+La partie css modal-content defini le style de la phrase qui apparaît au clic 
+
+.modal-trigger::-webkit-details-marker avec display none en option cache la flèche qui ouvre le panneau 
+
+En définitive il s’agit d’un menu qui se déroule mais qui est stylisé de manière a ce qu’il apparaisse avec transition au milieu de la page 
+
+
+4 – Comment l’utiliser dans un projet : 
+
+Par exemple dans le projet tarantino on pourrait faire apparaître la vidéo bande d’annonce en déroulant un bandeau de la même manière. Cela permettre d’alléger le visuel du site web. 
